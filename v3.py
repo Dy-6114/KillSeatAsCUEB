@@ -23,8 +23,8 @@ headers = {
 r = threading.Lock()
 q = queue.Queue()
 
-testseat = ["100456587","100456588","100456589","100456590","100456591","100456592"]
-# testseat = ["100456588","100456589","100456590"]
+testseat = []
+# testseat = []
 
 select_url = "https://10.21.95.57/ClientWeb/pro/ajax/reserve.aspx"
 login_url = "https://10.21.95.57/ClientWeb/pro/ajax/login.aspx"
@@ -116,19 +116,19 @@ def runkillseat(testseat,id):
 if __name__ == '__main__':
     time1 = time.time()
     _processes = []
-    _process = multiprocessing.Process(target=runkillseat, args=(testseat,"32019070096"))
+    _process = multiprocessing.Process(target=runkillseat, args=(testseat,""))
     _process.start()
     _processes.append(_process)
-    _process = multiprocessing.Process(target=runkillseat, args=(testseat, "32019070097"))
+    _process = multiprocessing.Process(target=runkillseat, args=(testseat, ""))
     _process.start()
     _processes.append(_process)
-    # _process = multiprocessing.Process(target=runkillseat, args=(testseat, "32019070080"))
+    # _process = multiprocessing.Process(target=runkillseat, args=(testseat, ""))
     # _process.start()
     # _processes.append(_process)
-    # _process = multiprocessing.Process(target=runkillseat, args=(testseat, "32019070095"))
+    # _process = multiprocessing.Process(target=runkillseat, args=(testseat, ""))
     # _process.start()
     # _processes.append(_process)
-    _process = multiprocessing.Process(target=runkillseat, args=(testseat, "32019070100"))
+    _process = multiprocessing.Process(target=runkillseat, args=(testseat, ""))
     _process.start()
     _processes.append(_process)
     for _process in _processes:
